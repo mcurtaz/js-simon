@@ -46,27 +46,6 @@ setTimeout(function(){ // set timeOut di 30000millisecondi (30s)
 
 
 
-// Funzione di controllo e stampa dei risultati
-
-function controllo(numeri, tentativi){
-  // confronto i due array e restituisco la quantità di numeri indovinati e quali sono.
-
-  var numeriCorretti = [];
-
-  for (var i = 0; i < 5; i++) {
-    if (cercaElemento(tentativi[i], numeri)){
-      numeriCorretti.push(tentativi[i]);
-    }
-  }
-
-  console.log("Hai indovinato " + numeriCorretti.length + " numeri.");
-  console.log("I numeri indovinati sono: " + numeriCorretti);
-
-
-}
-
-
-
 
 
 
@@ -84,4 +63,22 @@ function cercaElemento(elem, array){
   }
 
   return false;
+}
+
+// Funzione di controllo e stampa dei risultati
+
+function controllo(numeri, tentativi){
+  // confronto i due array e restituisco la quantità di numeri indovinati e quali sono.
+
+  var numeriCorretti = [];
+
+  for (var i = 0; i < 5; i++) {
+    if (cercaElemento(tentativi[i], numeri)){
+      numeriCorretti.push(tentativi[i]);
+    }
+  }
+
+  console.log("Hai indovinato " + numeriCorretti.length + " numeri.");
+  console.log("I numeri indovinati sono: " + numeriCorretti);
+
 }
